@@ -1,4 +1,4 @@
-module (
+module FSM(
   input logic in,
   output logic out
 );

@@ -1,6 +1,7 @@
 module FSM(
   input logic in,
   input logic clk,
+  input logic rstb,
   output logic out
 );
   
@@ -69,8 +70,12 @@ module FSM(
     endcase
   end
 
-  always_ff @(negedge clk) begin
-    current_state <= next_state;
+  always_ff @(posedge clk,negedge rstb) begin
+    if(~rstb) begin
+      current_state <= z_st;
+    end else begin
+      current_state <= next_state;
+    end
   end
 
 endmodule

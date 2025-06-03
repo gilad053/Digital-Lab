@@ -1,2 +1,2 @@
 # Digital-Lab
-my projects and homework exercises in digital lab
+My projects and homework exercises in digital lab
